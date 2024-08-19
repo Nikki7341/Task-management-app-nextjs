@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   if (!isClient) {
-    return null; // Or a loading indicator if you prefer
+    return null; 
   }
 
   return (

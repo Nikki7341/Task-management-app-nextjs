@@ -137,8 +137,8 @@ export const styles: any = {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
     height: "100vh",
-    display: "flex", // Use flexbox to center content vertically
-    alignItems: "center", // Vertically center the content
+    display: "flex", 
+    alignItems: "center", 
   },
   flexRowSpacedBw: {
     display: "flex",

@@ -89,7 +89,7 @@ const Home: React.FC = () => {
             <Grid
               item
               md={4}
-              sm={12}
+              xs={12}
               key={status}
               className={classes.taskColumns}
             >
@@ -171,7 +171,7 @@ const useStyles = makeStyles()((theme) => {
     },
     outerCard: {
       backgroundColor: "#ebecf0",
-      margin: "20px",
+      margin: "20px 10px",
       padding: "20px",
       borderRadius: "6px",
       // height: "78vh",
@@ -184,6 +184,10 @@ const useStyles = makeStyles()((theme) => {
       padding: "50px 100px",
       background:
         "linear-gradient(229deg, rgba(166,241,243,1) 35%, rgba(185,122,175,1) 50%, rgba(1,55,209,1) 100%)",
+        [theme.breakpoints.down("sm")]: {
+          padding: "20px 15px",
+          height: "100%",
+        }
     },
   };
 });
