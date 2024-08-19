@@ -71,7 +71,7 @@ const Home: React.FC = () => {
           id: parseInt(draggableId, 10),
           fromStatus: source.droppableId,
           toStatus: destination.droppableId,
-        })
+        }),
       );
     }
   };
@@ -95,11 +95,7 @@ const Home: React.FC = () => {
             >
               <Card className={classes.outerCard}>
                 <Typography variant="h6">
-                  {status === "todo"
-                    ? "To Do"
-                    : status === "doing"
-                    ? "Doing"
-                    : "Done"}
+                  {handleColumData(status, "To Do", "Doing", "Done")}
                 </Typography>
                 <Droppable droppableId={status}>
                   {(provided: any) => (
@@ -116,7 +112,7 @@ const Home: React.FC = () => {
                             status,
                             todoTask,
                             doingTask,
-                            doneTask
+                            doneTask,
                           ).map((item: TaskData, index: number) => (
                             <Draggable
                               draggableId={item.id.toString()}

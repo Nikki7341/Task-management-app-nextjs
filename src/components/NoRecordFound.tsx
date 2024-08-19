@@ -10,9 +10,9 @@ const NoRecordFound = () => {
       flexDirection="column"
       style={{ height: "100%" }}
     >
-      <Typography 
-      sx={{fontSize:'25px', fontWeight:"800", color:"gray"}}
-      >No tasks available</Typography>
+      <Typography sx={{ fontSize: "25px", fontWeight: "800", color: "gray" }}>
+        No tasks available
+      </Typography>
     </Box>
   );
 };

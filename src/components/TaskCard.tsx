@@ -43,10 +43,10 @@ interface Modal {
 
 const TaskCard = ({
   data,
-  handleEdit
+  handleEdit,
 }: {
   data: TaskData;
-  handleEdit: any
+  handleEdit: any;
 }) => {
   const { classes } = useStyles();
   const dispatch = useDispatch();

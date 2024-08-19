@@ -45,14 +45,21 @@ const tasksSlice = createSlice({
         saveTasks(state);
       }
     },
-    deleteTask: (state:any, action: PayloadAction<{ id: number; status: string }>) => {
+    deleteTask: (
+      state: any,
+      action: PayloadAction<{ id: number; status: string }>,
+    ) => {
       const { id, status } = action.payload;
       state[status] = state[status].filter((task: TaskData) => task.id !== id);
       saveTasks(state);
     },
     moveTask: (
-      state:any,
-      action: PayloadAction<{ id: number; fromStatus: string; toStatus: string }>
+      state: any,
+      action: PayloadAction<{
+        id: number;
+        fromStatus: string;
+        toStatus: string;
+      }>,
     ) => {
       const { id, fromStatus, toStatus } = action.payload;
       const taskList = state[fromStatus];

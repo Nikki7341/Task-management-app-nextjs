@@ -40,8 +40,6 @@ interface FormValue {
   description: string;
 }
 
-
-
 function TaskModal({
   modalProps,
   editTaskContent,
